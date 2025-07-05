@@ -1,5 +1,9 @@
-use("CrudDb")
+ 
+//  crud operation
+ use("CrudDb")
 
+
+//  create
 db.createCollection("courses")
 db.courses.insertOne({
     name:"Harry web dev free course",
@@ -7,7 +11,7 @@ db.courses.insertOne({
     assignments:12,
     projects:45
 })
-
+//insert
 db.courses.insertOne({
     name: "Harrys web dev free  course",
     price:12000,
@@ -83,3 +87,11 @@ db.courses.insertMany(
 ]
 
 )
+
+let a =db.courses.find({price: 0})
+// console.log(a.count())
+console.log(a.toArray())
+
+// update
+
+db.courses.updateOne({price: 0},{$set:{price: 100}})
