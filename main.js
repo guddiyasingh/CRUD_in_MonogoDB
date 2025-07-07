@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
+import {express} from  "express"
 
 let a = await mongoose.connect("mongodb://localhost:27017/")
 
-const express = require('express')
+// const express = require('express')
 const app = express()
 const port = 3000
 
